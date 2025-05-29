@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 header {
@@ -30,7 +35,7 @@ h1 {
     border: 1px solid #dddddd;
     border-radius: 10px;
     margin: 20px;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition:
         transform 0.3s ease,
@@ -43,9 +48,15 @@ h1 {
 }
 
 .movie img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+/* 修正第二張圖片的選擇器 */
+.movie img:nth-of-type(2) {
+  max-width: 40%;
+  margin-top: 10px;
 }
 
 .movie h2 {
@@ -68,4 +79,12 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+main {
+  text-align: center;
+}
+
+header, footer {
+  text-align: center;
 }
