@@ -55,8 +55,15 @@ h1 {
 
 /* 修正第二張圖片的選擇器 */
 .movie img:nth-of-type(2) {
-  max-width: 40%;
+  max-width: 60%;
   margin-top: 10px;
+}
+
+/* 縮放電影二的圖片到原來的一半 */
+.movie img[alt="《機動戰士 Gundam GQuuuuuuX -Beginning-》"] {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
 }
 
 .movie h2 {
@@ -87,4 +94,16 @@ main {
 
 header, footer {
   text-align: center;
+}
+
+/* 增加更明顯的電影區隔樣式 */
+.movie-card {
+    margin-bottom: 50px;
+    border-bottom: 4px solid #aaa;
+    padding-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
