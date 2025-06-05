@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #E8F4F8; /* 淺藍色背景 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
+    background: #2C5364; /* 深藍色頭部 */
+    color: #E8F4F8;
     padding: 20px 0;
     text-align: center;
 }
@@ -27,62 +27,82 @@ h1 {
     overflow: hidden;
 }
 
-.movie {
+.movie-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #A5C9CA; /* 淺藍綠色邊框 */
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(44, 83, 100, 0.1);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
+    margin-bottom: 50px;
+    border-bottom: 4px solid #395B64; /* 深藍綠色底部邊框 */
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #F5FAFA; /* 非常淺的藍白色背景 */
 }
 
-.movie:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.movie-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(44, 83, 100, 0.2);
 }
 
-.movie img {
-    max-width: 80%;
+.movie-card img {
+    width: 50vw;  /* 設定寬度為螢幕寬度的50% */
+    height: auto; /* 保持圖片比例 */
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-/* 修正第二張圖片的選擇器 */
-.movie img:nth-of-type(2) {
-  max-width: 60%;
-  margin-top: 10px;
+/* 特別針對第二張圖片的樣式 */
+.movie-card img[alt="《機動戰士 Gundam GQuuuuuuX -Beginning-》"] {
+    width: 30vw;
 }
 
-/* 縮放電影二的圖片到原來的一半 */
-.movie img[alt="《機動戰士 Gundam GQuuuuuuX -Beginning-》"] {
-    display: block;
-    margin: 0 auto;
-    max-width: 50%;
-}
-
-.movie h2 {
-    font-size: 1.5em;
+.movie-card h2, .movie-card h3 {
+    color: #2C5364; /* 深藍色標題 */
     margin: 10px 0;
-    color: #333;
 }
 
-.movie p {
-    font-size: 1em;
-    color: #666;
-    text-align: center;
+.movie-card p {
+    color: #395B64; /* 深藍綠色文字 */
+    text-align: left;
+    line-height: 1.8;
+    margin: 12px 0;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+}
+
+.movie-description {
+    background: rgba(44, 83, 100, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: inset 0 1px 3px rgba(44, 83, 100, 0.1);
+    border-left: 4px solid #2C5364;
+}
+
+.movie-synopsis {
+    font-weight: 500;
+    color: #2C5364;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 2px solid rgba(44, 83, 100, 0.2);
+    padding-bottom: 8px;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
+    background: #2C5364; /* 深藍色底部 */
+    color: #E8F4F8;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -94,16 +114,4 @@ main {
 
 header, footer {
   text-align: center;
-}
-
-/* 增加更明顯的電影區隔樣式 */
-.movie-card {
-    margin-bottom: 50px;
-    border-bottom: 4px solid #aaa;
-    padding-bottom: 30px;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
 }
